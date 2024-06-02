@@ -1,0 +1,213 @@
+$min-terminal-width: 400px;
+$max-terminal-width: 2 * $min-terminal-width;
+$med-breakpoint: $min-terminal-width+100px;
+$lg-breakpoint: 3 * $min-terminal-width;
+// The terminal width should follow this logic:
+// - If screen width < 400px --> terminal width is 100% screen width
+// - If screen width > 400px --> terminal width is 400px
+// - If screen width > 1200px --> terminal width is 1/3 screen width
+//
+// The terminal's layout should follow this logic:
+// - If terminal width > 1/3 screen width --> terminal should be laid out
+//   beside the app.
+// - If terminal width < 1/3 screen width --> terminal should be laid out
+//   to it overlaps the app.
+.terminalResizable {
+    @apply relative;
+    @apply flex w-full;
+    // Layout logic
+    @media (max-width: $lg-breakpoint) {
+        @apply absolute top-0 right-0 h-full;
+    }
+}
+
+.terminalContainer {
+    @apply w-full;
+    @apply text-white;
+    @apply bg-black-1000;
+    @apply flex flex-col;
+    .logs {
+        @apply font-mono;
+        @apply overflow-auto;
+        @apply text-sm;
+        @apply flex-1;
+        @apply p-4;
+        @apply leading-5;
+        flex-basis: 0; // Required, or logs div will grow with content.
+    }
+    // Fix bug where an empty terminal is too narrow.
+    .logs:empty {
+        @apply overflow-hidden;
+    }
+    // Fix bug where an empty terminal is too narrow.
+    .logs:empty::after {
+        width: 100vw; // Some huge number
+        content: ' ';
+        display: block;
+    }
+    .statusBar {
+        @apply flex;
+        @apply relative;
+        @apply flex-row items-center;
+        @apply flex-none;
+        @apply border border-black-800 border-l-0 border-r-0 border-b-0;
+        @apply p-2;
+        .branch {
+            @apply flex;
+            @apply px-2;
+            @apply py-1;
+            @apply rounded;
+            @apply items-center;
+            @apply bg-black-900;
+            @apply text-sm;
+        }
+        .path {
+            @apply px-2;
+            @apply text-sm;
+        }
+        .actions {
+            @apply flex;
+            @apply ml-auto;
+            @apply flex-none;
+            button {
+                &:first-child {
+                    @apply mr-4;
+                }
+                &:hover {
+                    @apply bg-black-900;
+                }
+                &:last-child {
+                    @apply px-3;
+                }
+                &:active,
+                &:focus {
+                    @apply outline-none;
+                    @apply bg-black-800;
+                }
+            }
+        }
+    }
+    &.hasError {
+        .statusBar {
+            @apply bg-red-700;
+            .iconAlert {
+                @apply mr-2 ml-1;
+            }
+            .branch {
+                @apply bg-red-600;
+            }
+            .actions {
+                button {
+                    &:hover {
+                        @apply bg-red-600;
+                    }
+                }
+            }
+        }
+    }
+    // Scrollbars hack
+     ::-webkit-scrollbar {
+        @apply bg-transparent;
+        border-radius: 100px;
+        height: 6px;
+        width: 6px;
+    }
+     ::-webkit-scrollbar-corner {
+        @apply bg-transparent;
+    }
+     ::-webkit-scrollbar-thumb:vertical,
+     ::-webkit-scrollbar-thumb:horizontal {
+        @apply bg-transparent;
+        border-radius: 100px;
+    }
+     ::-webkit-scrollbar:vertical:hover,
+     ::-webkit-scrollbar:horizontal:hover {
+        @apply bg-black-900;
+    }
+    &:hover ::-webkit-scrollbar-thumb:vertical,
+    &:hover ::-webkit-scrollbar-thumb:horizontal {
+        @apply bg-black-800;
+        border-radius: 100px;
+    }
+     ::-webkit-scrollbar-thumb:vertical:hover,
+     ::-webkit-scrollbar-thumb:horizontal:hover {
+        @apply bg-black-700;
+    }
+     ::-webkit-scrollbar-thumb:vertical:active,
+     ::-webkit-scrollbar-thumb:horizontal:active {
+        @apply bg-black-600;
+    }
+}
+
+.terminalContainerEnter {
+    opacity: 0;
+    transform: translateX(30vw);
+}
+
+.terminalContainerEnterActive {
+    opacity: 1;
+    transform: none;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.terminalContainerExit {
+    opacity: 1;
+    transform: none;
+}
+
+.terminalContainerExitActive {
+    opacity: 0;
+    transform: translateX(30vw);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.terminalButton {
+    @apply fixed;
+    @apply right-0 bottom-0;
+    @apply text-sm;
+    @apply py-3 px-6;
+    @apply text-white;
+    @apply bg-black-1000;
+    @apply flex items-center;
+    @apply rounded rounded-tl-lg rounded-bl-none rounded-tr-none rounded-br-none;
+    @apply select-none;
+    &:focus,
+    &:active {
+        @apply outline-none;
+        @apply bg-black-800;
+    }
+    &:hover {
+        @apply bg-black-900;
+    }
+    svg {
+        @apply mr-4;
+    }
+    &.hasError {
+        @apply bg-red-700;
+        &:hover {
+            @apply bg-red-600;
+        }
+    }
+}
+
+.terminalButtonEnter {
+    @apply opacity-0;
+    transform: translateX(10em);
+}
+
+.terminalButtonEnterActive {
+    @apply opacity-100;
+    transform: none;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.terminalButtonExit {
+    @apply opacity-100;
+    transform: none;
+}
+
+.terminalButtonExitActive {
+    @apply opacity-0;
+    transform: translateX(10em);
+    transition: opacity 300ms, transform 300ms;
+}

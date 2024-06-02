@@ -1,0 +1,20 @@
+.alertContainer {
+    @apply bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative;
+    @apply mt-4 mb-4;
+}
+
+.title {
+    @apply font-semibold;
+    @apply mr-2;
+}
+
+.message {
+    @apply block;
+    @screen sm {
+        @apply inline;
+    }
+}
+
+.buttonContainer {
+    @apply absolute top-0 bottom-0 right-0 px-4 py-3;
+}

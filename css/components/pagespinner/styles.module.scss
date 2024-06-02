@@ -1,0 +1,35 @@
+.spinnerContainer {
+    @apply flex; // Useful when not in overlay mode.
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+    @apply flex-1;
+    animation-name: transition-in;
+    animation-delay: 500ms;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+    p {
+        @apply text-sm;
+        @apply mt-2;
+    }
+    &.overlay {
+        @apply absolute;
+        @apply min-h-screen;
+        @apply min-w-full;
+        @apply bg-white bg-opacity-75;
+        @apply top-0;
+        @apply left-0;
+        @apply z-10;
+    }
+}
+
+@keyframes transition-in {
+    0% {
+        @apply opacity-0;
+        transform: scale(0);
+    }
+    100% {
+        @apply opacity-100;
+        transform: none;
+    }
+}

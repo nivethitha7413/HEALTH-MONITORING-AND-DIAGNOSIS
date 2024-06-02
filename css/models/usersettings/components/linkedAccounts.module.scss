@@ -1,0 +1,47 @@
+div.container {
+    @apply grid gap-8;
+    padding: 32px 24px;
+    h2.title {
+        font-size: 20px;
+        @apply pb-4;
+    }
+    ul.list {
+        @apply grid gap-4;
+        @apply list-none;
+        li {
+            @apply flex;
+            @apply w-full;
+            @apply pb-4;
+            @apply items-center;
+            @apply justify-between;
+            span>strong {
+                @apply capitalize;
+            }
+        }
+    }
+}
+
+.linkedElement {
+    @apply flex;
+}
+
+.linkedElement>.disconnect {
+    @apply ml-2;
+}
+
+.linkedElement>.changeemail {
+    @apply ml-2;
+}
+
+.iconAlert {
+    display: inline;
+    path {
+        @apply fill-current text-red-600;
+    }
+}
+
+.notificationText {
+    @apply text-black-1000;
+    @apply leading-normal;
+    @apply pl-2;
+}

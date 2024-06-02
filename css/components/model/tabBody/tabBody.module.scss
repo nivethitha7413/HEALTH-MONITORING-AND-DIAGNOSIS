@@ -1,0 +1,11 @@
+.root {
+    @apply text-black-900;
+}
+
+hr {
+    border-width: 0;
+}
+
+.separator {
+    @apply border-t-0 border-b border-solid border-black-400;
+}

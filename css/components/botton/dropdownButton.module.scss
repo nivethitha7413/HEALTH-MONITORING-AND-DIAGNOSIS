@@ -1,0 +1,25 @@
+.chevronButton {
+    @apply px-2;
+    @apply h-10;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.mainButton {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    &::after {
+        @apply bg-blue-700;
+        content: ' ';
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &:disabled {
+        &::after {
+            @apply bg-black-500 opacity-25;
+        }
+    }
+}

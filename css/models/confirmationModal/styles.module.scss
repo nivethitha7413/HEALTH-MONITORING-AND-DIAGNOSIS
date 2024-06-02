@@ -1,0 +1,14 @@
+.TitleContainer div {
+    @apply text-base ml-4 mr-4;
+}
+
+.ButtonsContainer div {
+    @apply ml-4 mr-4 py-4;
+}
+
+.ButtonsContainer button {
+    @apply py-2 px-4;
+    &:focus {
+        @apply outline-none;
+    }
+}

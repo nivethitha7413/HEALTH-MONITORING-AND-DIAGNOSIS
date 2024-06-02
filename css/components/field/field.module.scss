@@ -1,0 +1,19 @@
+.labelContainer {
+    @apply flex;
+    @apply flex-row;
+    @apply pb-2;
+}
+
+.alignRight {
+    margin: 0 0 0 auto;
+}
+
+.error {
+    @apply text-red-700;
+    @apply text-base;
+    @apply mt-2;
+}
+
+input:disabled {
+    @apply bg-black-200;
+}

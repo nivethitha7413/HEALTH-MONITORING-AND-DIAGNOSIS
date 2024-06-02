@@ -1,0 +1,76 @@
+.pendingState {
+    @apply flex;
+    @apply flex-col;
+    @apply flex-auto;
+    @apply items-center;
+    @apply justify-center;
+    // Bump it up a bit.
+    @apply pb-20;
+    p {
+        @apply text-sm;
+    }
+}
+
+.pendingStateRedesignScreenshot {
+    @apply flex;
+    @apply flex-col;
+    @apply flex-auto;
+    @apply items-center;
+    @apply justify-end;
+    .logo {
+        @apply h-6;
+        @apply w-8;
+        position: fixed;
+        top: 1.75rem;
+        left: 1.5rem;
+    }
+    .appScreenshotBorderFrame {
+        @apply bg-white;
+        @apply border border-b-0;
+        @apply rounded-tl-2xl rounded-tr-2xl;
+        @apply pt-4 pr-4 pl-4;
+        @apply mr-12 ml-12;
+        // Prevents shadow from overflowing container
+        @apply overflow-hidden;
+        border-color: #aaaa;
+        box-shadow: 0 -12px 20px 2px rgb(0 66 128 / 5%), -20px 0 20px -2px rgb(0 66 128 / 5%), 20px 0 20px -2px rgb(0 66 128 / 5%), -20px 0 20px -2px rgb(0 66 128 / 5%), 20px 0 20px -2px rgb(0 66 128 / 5%);
+    }
+    svg {
+        @apply h-8;
+        @apply w-6;
+    }
+    p {
+        @apply text-sm;
+        @apply text-center;
+        @apply pb-12;
+        white-space: pre-line;
+    }
+    img {
+        @apply rounded-tl-xl rounded-tr-xl;
+    }
+}
+
+.pendingStateRedesignNoScreenshot {
+    @apply flex;
+    @apply flex-col;
+    @apply flex-auto;
+    @apply items-center;
+    @apply justify-center;
+    .logo {
+        @apply h-6;
+        @apply w-8;
+        position: fixed;
+        top: 1.75rem;
+        left: 1.5rem;
+    }
+    svg {
+        @apply h-8;
+        @apply w-6;
+    }
+    p {
+        @apply text-sm;
+        @apply text-center;
+        @apply pb-20;
+        white-space: pre-line;
+    }
+}

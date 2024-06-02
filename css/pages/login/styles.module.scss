@@ -1,0 +1,130 @@
+.container {
+    @apply flex;
+    @apply flex-row;
+    @apply max-h-screen;
+    @screen sm {
+        @apply pl-0;
+    }
+}
+
+.title {
+    @apply w-[20.5rem];
+    @apply leading-tight;
+    @apply font-semibold;
+    @apply text-center;
+    width: 380px;
+    @screen sm {
+        @apply text-left;
+    }
+    .onboarding {
+        @apply text-black-1000;
+        @apply font-sans;
+        @apply font-bold;
+        font-size: 2.5rem;
+        line-height: 100%;
+    }
+}
+
+.subtitle {
+    @apply text-center;
+    @apply mt-1;
+    @screen sm {
+        @apply text-left;
+        width: 380px;
+    }
+    & p {
+        @apply font-medium;
+        @apply text-base;
+        @apply leading-6;
+        width: 20rem;
+    }
+}
+
+.button {
+    @apply mt-6;
+    @apply mr-auto;
+}
+
+.pageContainer {
+    @apply items-center;
+    @apply flex;
+    @apply flex-col;
+    @apply flex-1;
+    @apply pb-0;
+    gap: 0.75rem;
+    @screen sm {
+        @apply mt-0;
+        margin-top: 7vh;
+        @apply justify-center;
+    }
+}
+
+.loginContainer {
+    @apply px-8;
+    width: 380px;
+    @screen sm {
+        @apply py-3;
+        @apply pl-0;
+    }
+    ul.loginOptions {
+        li {
+            button {
+                @apply box-border;
+                @apply w-full;
+                @apply h-10;
+                @apply leading-none;
+            }
+            &:first-child {
+                button {
+                    @apply mb-2;
+                }
+            }
+        }
+    }
+}
+
+.agreeToTerms {
+    @apply mt-6 pb-8;
+    @apply text-base text-center;
+}
+
+.termsOfUseSectionDivider {
+    align-self: center;
+    @screen sm {
+        align-self: flex-start;
+    }
+}
+
+.termsOfUseSectionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @apply mt-4;
+}
+
+.termsOfUseSection {
+    @apply text-gray-600;
+    @apply font-sans;
+    @apply font-normal;
+    @apply text-sm;
+    @apply leading-6;
+    @apply text-center;
+    @apply px-8;
+    width: 380px;
+    @screen sm {
+        @apply text-left;
+        @apply px-0;
+    }
+    .loginPageLink {
+        @apply text-blue-700;
+        &:hover {
+            @apply underline;
+        }
+    }
+}
+
+.continueWithSignInButton {
+    @apply w-full mt-2;
+    @apply bg-blue-700;
+    border-radius: 0.1875rem;
+}

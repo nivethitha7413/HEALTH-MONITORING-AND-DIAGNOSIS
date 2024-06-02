@@ -1,0 +1,25 @@
+.copyLinkButton {
+    @apply flex items-center;
+    @apply p-1;
+    @apply mr-4;
+    @apply text-blue-700;
+    min-width: 6rem;
+    /* Seems like it's repeating the line above, but we add it here as well to ensure there's no layout shift when text changes from "Copy embed link" to "Copied!" */
+    p {
+        @apply text-left;
+        min-width: 6rem;
+    }
+}
+
+.copyLinkButton:focus {
+    @apply outline-none;
+}
+
+.iconLink {
+    @apply mr-2;
+    @apply w-5;
+}
+
+.iconLink path {
+    @apply fill-blue-700;
+}

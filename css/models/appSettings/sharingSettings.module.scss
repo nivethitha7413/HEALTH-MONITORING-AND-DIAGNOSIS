@@ -1,0 +1,14 @@
+.linkIcon {
+    @apply inline;
+    @apply fill-current text-blue-700;
+    @apply w-4;
+}
+
+.inlineTabBodyPart {
+    @apply pt-0;
+}
+
+.fieldErrorMessage {
+    @apply mt-2;
+    @apply text-base text-red-700;
+}

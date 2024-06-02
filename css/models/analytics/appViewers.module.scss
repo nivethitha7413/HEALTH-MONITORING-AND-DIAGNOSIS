@@ -1,0 +1,47 @@
+.totalUniqueViewers {
+    @apply mb-10;
+}
+
+.tooltipText {
+    @apply text-center;
+}
+
+.iconHelp {
+    @apply inline;
+    vertical-align: sub;
+}
+
+.iconHelp path {
+    @apply fill-black-500;
+}
+
+.tooltipLink:hover .iconHelp path {
+    @apply fill-black-700;
+}
+
+.mostRecentAppViewers {
+    .subtitle {
+        @apply font-semibold leading-4 text-black-900;
+        @apply mb-4;
+    }
+    .appViewers {
+        @apply flex flex-col gap-2;
+    }
+    .appViewer {
+        @apply grid items-center gap-2;
+        @apply text-sm;
+        grid-template-columns: 1.5rem minmax(3rem, 1fr) minmax(min-content, auto);
+    }
+    .avatar {
+        @apply grid w-6 h-6 place-items-center;
+        @apply text-white text-center uppercase font-semibold;
+        @apply rounded-full;
+    }
+    .identifier {
+        @apply flex-grow;
+        @apply text-black-900 truncate;
+    }
+    .timestamp {
+        @apply text-black-700 leading-4 text-right;
+    }
+}

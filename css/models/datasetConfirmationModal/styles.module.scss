@@ -1,0 +1,19 @@
+.modalHeader {
+    @apply m-6 mb-0;
+    span {
+        @apply font-bold text-base;
+    }
+}
+
+.modalBody {
+    p {
+        @apply text-base text-black-900;
+    }
+}
+
+.modalFooter button {
+    @apply py-2 px-4;
+    &:focus {
+        @apply outline-none;
+    }
+}

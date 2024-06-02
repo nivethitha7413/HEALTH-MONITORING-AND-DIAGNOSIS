@@ -1,0 +1,76 @@
+.button {
+    @apply relative;
+    @apply transition-colors duration-200;
+    @apply py-2 px-4 bg-blue-700 rounded text-white cursor-pointer;
+    &:focus {
+        @apply outline-none;
+    }
+    &:focus-visible {
+        @apply outline-none;
+        @apply shadow-md;
+    }
+    &:disabled {
+        @apply text-black-700;
+        @apply bg-black-200;
+        @apply cursor-default;
+    }
+    &.isLoading {
+        @apply cursor-wait;
+        @apply flex items-center;
+    }
+    .spinner {
+        @apply ml-4;
+    }
+}
+
+button.button_primary {
+    @apply bg-blue-700;
+    &:hover:not(:disabled) {
+        @apply bg-blue-600;
+    }
+}
+
+button.button_destructive {
+    @apply bg-red-700;
+    &:hover:not(:disabled) {
+        @apply bg-red-600;
+    }
+}
+
+button.button_outline {
+    @apply bg-transparent;
+    @apply text-blue-700;
+    @apply border border-blue-700;
+    &:hover:not(:disabled) {
+        @apply bg-blue-700;
+        @apply text-white;
+        @apply border-transparent;
+    }
+}
+
+button.button_destructive_outline {
+    @apply bg-transparent;
+    @apply text-red-700;
+    @apply border border-red-700;
+    &:hover:not(:disabled) {
+        @apply bg-red-700;
+        @apply text-white;
+        @apply border-transparent;
+    }
+}
+
+button.button_cancel {
+    @apply cursor-pointer;
+    @apply bg-transparent;
+    @apply text-blue-700;
+    @apply mr-6 p-0;
+    &:hover {
+        @apply underline;
+    }
+    &:focus {
+        @apply outline-none;
+    }
+    &:focus-visible {
+        @apply shadow-md;
+    }
+}

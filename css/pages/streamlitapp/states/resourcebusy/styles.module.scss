@@ -1,0 +1,50 @@
+.explodingHeadEmoji {
+    svg {
+        @apply w-12;
+    }
+}
+
+h1.heading {
+    @apply text-2xl;
+    @apply my-4;
+    @apply text-black-900 font-semibold;
+}
+
+hr.smallDivider {
+    @apply border-t-2;
+    @apply border-black-400;
+    @apply w-6;
+}
+
+div.contactSupport {
+    @apply flex flex-col;
+    @apply mt-4;
+    @apply text-black-700;
+    @apply leading-7;
+    .mailTo {
+        @apply text-black-700;
+        @apply underline;
+    }
+}
+
+.container {
+    ul {
+        @apply ml-5;
+    }
+    li {
+        @apply list-disc;
+        @apply ml-1;
+    }
+}
+
+p.bodyText {
+    @apply pt-0;
+    @apply mb-8;
+    @apply text-black-900;
+    @apply leading-6;
+}
+
+button.action {
+    @apply mt-1;
+    max-width: max-content;
+}

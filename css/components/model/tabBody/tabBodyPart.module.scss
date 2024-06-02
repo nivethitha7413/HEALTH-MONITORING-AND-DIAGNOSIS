@@ -1,0 +1,17 @@
+.root {
+    @apply p-6;
+}
+
+.header {
+    @apply mb-4;
+    h3 {
+        @apply text-base font-semibold text-black-900 leading-7;
+    }
+    h4 {
+        @apply text-base font-normal text-black-700;
+    }
+}
+
+.warning {
+    @apply mt-4;
+}

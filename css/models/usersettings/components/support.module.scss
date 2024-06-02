@@ -1,0 +1,12 @@
+.container {
+    ul {
+        @apply ml-5;
+    }
+    li {
+        @apply list-disc;
+        @apply ml-1;
+    }
+    .liContainer {
+        @apply flex items-center;
+    }
+}

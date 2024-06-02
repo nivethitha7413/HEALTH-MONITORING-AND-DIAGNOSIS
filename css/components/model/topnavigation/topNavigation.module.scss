@@ -1,0 +1,47 @@
+$min-topbar-width: 768px; // Matches modal overrides
+.topNavigationContainer {
+    @apply h-full;
+    @apply flex flex-col;
+}
+
+.topNavigationMenuContainer {
+    @apply border-b border-black-400;
+    @apply z-10;
+    // Makes the Modal Header sticky so it does not scroll
+    @apply flex flex-col;
+    @media (min-width: $min-topbar-width) {
+        // Reposition the menu border (bottom → right).
+        @apply border-b-2;
+        @apply border-r border-black-200;
+    }
+}
+
+.topNavigationBodyContainer {
+    @apply relative;
+    @apply flex;
+    @apply h-full;
+    @apply mt-2;
+    // 1. "overflow: scroll" creates an empty space for the scrollbar in browsers
+    //    that use Webkit or Blink (in browsers that use Gecko the scrollbar is overlayed by default).
+    // 2. "overflow: overlay" removes that empty space and forces the scrollbar to overlay.
+    //    NOTE: Browsers that use Gecko do *NOT* support "overlay" property.
+    // HACK: use "overflow: scroll" followed by "overflow: overlay".
+    // This will set the overflow property to "overlay" in browsers that support it,
+    // and will set it to "scroll" in others.
+    overflow: scroll;
+    overflow: overlay;
+}
+
+.footer {
+    @apply mb-3 #{!important};
+    @apply flex;
+    @apply justify-between;
+    @apply border-t-2 border-black-200;
+    @apply pt-2;
+    @apply truncate;
+    @apply text-sm;
+}
+
+.footerCopy {
+    @apply flex;
+}

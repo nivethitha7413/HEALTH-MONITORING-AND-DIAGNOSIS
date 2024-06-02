@@ -1,0 +1,27 @@
+.container {
+    @apply flex;
+    @apply w-full h-9;
+    @apply text-sm;
+    @apply bg-gray-100;
+    @apply items-center justify-between;
+    @apply border border-0;
+    position: fixed;
+    bottom: 0;
+}
+
+.hostedName {
+    @apply flex;
+    @apply ml-3;
+}
+
+.linkOutText {
+    @apply flex;
+    @apply mr-4;
+    @apply font-semibold;
+}
+
+.linkOutIcon {
+    @apply ml-1;
+    @apply w-5;
+    @apply h-5;
+}

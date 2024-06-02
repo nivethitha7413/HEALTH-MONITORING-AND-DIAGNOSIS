@@ -1,0 +1,91 @@
+.switcherContainer {
+    @apply border border-black-400;
+    @apply bg-white;
+    @apply text-black-900;
+    @apply min-w-13rem;
+    .title {
+        @apply inline-block;
+        @apply p-4 pb-3;
+        @apply mt-2;
+        @apply uppercase;
+        @apply text-black-600 font-medium text-sm;
+        @apply tracking-wider;
+    }
+    >ul {
+        @apply overflow-auto;
+        @apply py-3;
+        max-height: 50vh;
+        li {
+            button {
+                @apply flex items-center;
+                @apply w-full;
+                @apply text-left;
+                @apply px-4;
+                @apply py-2;
+                img {
+                    @apply mr-2;
+                    @apply rounded-full;
+                    @apply border border-black-300;
+                    height: 25px;
+                    width: 25px;
+                }
+                &.selected {
+                    @apply font-semibold;
+                    .iconCheck {
+                        @apply ml-auto;
+                    }
+                }
+                &:hover {
+                    @apply bg-black-200;
+                }
+                &:active,
+                &:focus {
+                    @apply outline-none;
+                }
+            }
+            &.connectAccountBtn {
+                button {
+                    svg {
+                        @apply mr-2;
+                        height: 25px;
+                        width: 25px;
+                    }
+                    &:hover {
+                        @apply bg-white;
+                        @apply underline;
+                    }
+                    .spinner {
+                        @apply ml-auto;
+                    }
+                }
+            }
+        }
+    }
+    .signOutContainer {
+        @apply p-4;
+        @apply border-t;
+        @apply bg-black-100;
+        @apply border-solid;
+        @apply border-black-300;
+        .signOutBtn {
+            @apply text-sm;
+            @apply text-left;
+            @apply text-black-900;
+            &:hover {
+                @apply underline;
+            }
+        }
+        ul.connectedAccounts {
+            @apply text-sm;
+            @apply text-black-700;
+        }
+    }
+}
+
+// To hide the workspace text on mobile, allowing for a bit more real-estate
+.WorkspaceName {
+    @apply hidden;
+    @screen md {
+        @apply block;
+    }
+}

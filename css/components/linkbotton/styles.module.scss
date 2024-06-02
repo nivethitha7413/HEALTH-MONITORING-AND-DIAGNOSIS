@@ -1,0 +1,22 @@
+.linkButton {
+    @apply text-blue-700;
+    @apply outline-none;
+    @apply border-none;
+    &:active,
+    &:focus {
+        @apply outline-none;
+    }
+    &:hover {
+        @apply underline;
+    }
+    &:disabled {
+        @apply text-black-700;
+    }
+    &.isLoading {
+        @apply cursor-wait;
+        @apply flex items-center;
+    }
+    .spinner {
+        @apply ml-4;
+    }
+}

@@ -1,0 +1,12 @@
+dl.limitsTable {
+    @apply text-base;
+    @apply grid;
+    @apply gap-y-2;
+    div {
+        @apply grid gap-4 leading-5 overflow-hidden;
+        grid-template-columns: 160px 1fr;
+        dt {
+            @apply text-black-900 font-semibold;
+        }
+    }
+}

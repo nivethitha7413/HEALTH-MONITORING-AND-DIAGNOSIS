@@ -1,0 +1,47 @@
+.root {
+    @apply flex flex-col;
+}
+
+.viewerRow {
+    @apply flex gap-2 items-center;
+    @apply h-9;
+    // Show close icon on row hover
+    &:hover {
+        @apply bg-black-200;
+        .close {
+            @apply inline;
+        }
+    }
+}
+
+.avatar {
+    @apply rounded-full w-6 h-6;
+    @apply capitalize text-white font-semibold;
+    @apply flex justify-center items-center;
+    // Prevent the avatar icon to shrink when email address is too long and overflows
+    @apply flex-none;
+}
+
+.viewer {
+    @apply flex-auto;
+    @apply text-black-900;
+    // Email address should stay in one line. Make it scrollable to be able to read the whole address, but hide scrollbar because field is small.
+    @apply overflow-scroll;
+    white-space: nowrap;
+    // Hide scrollbar:
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    &::-webkit-scrollbar {
+        @apply hidden;
+        /* Chrome, Safari and Opera */
+    }
+}
+
+.close {
+    @apply h-4 w-4;
+    @apply cursor-pointer;
+    // By default, hide the close button
+    @apply hidden;
+}

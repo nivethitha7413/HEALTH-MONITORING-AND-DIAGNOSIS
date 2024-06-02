@@ -1,0 +1,32 @@
+.badge {
+    font-size: 10px;
+    @apply inline-flex items-center gap-1 px-2 rounded-full;
+    @apply leading-4 font-semibold text-black-900;
+    &.dark {
+        @apply text-white;
+    }
+    &.info {
+        @apply bg-black-200;
+        &.dark {
+            @apply bg-black-900;
+        }
+    }
+    &.positive {
+        @apply bg-green-200;
+        &.dark {
+            @apply bg-green-900;
+        }
+    }
+    &.warning {
+        @apply bg-orange-200;
+        &.dark {
+            @apply bg-orange-900;
+        }
+    }
+    &.negative {
+        @apply bg-red-200;
+        &.dark {
+            @apply bg-red-900;
+        }
+    }
+}

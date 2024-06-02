@@ -1,0 +1,58 @@
+.embedAppContainer {
+    @apply w-full;
+    @apply flex flex-col;
+    @apply mx-4;
+}
+
+.embedInputContainer {
+    @apply flex;
+    @apply my-3;
+    &>div {
+        @apply w-full;
+    }
+}
+
+.previewOptionsText {
+    @apply opacity-50;
+    @apply text-sm;
+}
+
+.previewOptionContainer {
+    @apply w-full;
+    @apply grid grid-cols-3 gap-y-2 gap-x-6;
+    @apply pt-1;
+    @apply truncate;
+    @apply overflow-scroll;
+}
+
+.getCodeButton {
+    @apply p-2;
+    @apply mr-2;
+    @apply mt-1;
+    @apply rounded-r;
+    @apply text-white;
+    @apply bg-blue-700;
+    min-width: 88px;
+}
+
+.getCodeButton:hover {
+    @apply opacity-90;
+}
+
+.getCodeButton:focus {
+    @apply outline-none;
+}
+
+.link {
+    @apply underline;
+    @apply opacity-90;
+}
+
+.iconLink {
+    @apply mr-3;
+    @apply w-5;
+}
+
+.iconLink path {
+    @apply fill-blue-700;
+}

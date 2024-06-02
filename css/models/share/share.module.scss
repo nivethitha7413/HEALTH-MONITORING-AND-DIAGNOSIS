@@ -1,0 +1,40 @@
+.modalBody {
+    @apply flex flex-col;
+    @apply h-full;
+    @apply text-sm;
+}
+
+.shareMenuHeader {
+    @apply flex flex-row;
+    @apply border-t;
+    @apply border-black-400;
+    @apply pl-4 py-2;
+}
+
+.shareMenuFooter {
+    @apply flex flex-row justify-between;
+    @apply border-t;
+    @apply border-black-400;
+    @apply pl-4 py-2;
+}
+
+.bodyPadding {
+    @apply px-4;
+}
+
+.modalTop {
+    @apply mt-4 mb-3.5;
+}
+
+.modalContent {
+    @apply flex-1;
+    // 1. "overflow: scroll" creates an empty space for the scrollbar in browsers
+    //    that use Webkit or Blink (in browsers that use Gecko the scrollbar is overlayed by default).
+    // 2. "overflow: overlay" removes that empty space and forces the scrollbar to overlay.
+    //    NOTE: Browsers that use Gecko do *NOT* support "overlay" property.
+    // HACK: use "overflow: scroll" followed by "overflow: overlay".
+    // This will set the overflow property to "overlay" in browsers that support it,
+    // and will set it to "scroll" in others.
+    overflow: auto;
+    overflow: overlay;
+}

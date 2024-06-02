@@ -1,0 +1,27 @@
+.form {
+    @apply flex;
+    @apply h-10;
+}
+
+.inputField {
+    @apply flex-auto;
+}
+
+.inputField input {
+    @apply text-black-900;
+    @apply text-sm;
+    &::placeholder {
+        @apply text-black-700;
+        @apply text-sm;
+    }
+}
+
+.inviteButton {
+    @apply rounded-none rounded-br rounded-tr;
+    @apply text-sm;
+}
+
+.errorMessage {
+    @apply mt-2;
+    @apply text-red-700;
+}

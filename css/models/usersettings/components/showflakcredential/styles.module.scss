@@ -1,0 +1,41 @@
+.container {
+    @apply flex flex-col gap-4;
+    @apply pt-3;
+    @apply text-base text-black-900 leading-6;
+    .bannerActions {
+        @apply flex flex-col gap-5;
+        @apply pt-2;
+        a {
+            @apply underline;
+            &:hover {
+                @apply no-underline;
+            }
+        }
+        .generateButton {
+            @apply self-start;
+        }
+    }
+    .regenerateCredentialsContainer {
+        @apply flex gap-2;
+        .regenerateCredentialsBody {
+            @apply flex flex-col gap-2;
+            h4 {
+                @apply font-bold;
+            }
+            code {
+                @apply text-sm text-green-900;
+            }
+            .regenerateButton {
+                @apply self-start;
+            }
+        }
+    }
+    .divider {
+        border-bottom-width: 1px;
+        @apply mt-2 border-black-400;
+    }
+}
+
+.loadingContainer {
+    @apply flex flex-col items-center justify-center h-full;
+}

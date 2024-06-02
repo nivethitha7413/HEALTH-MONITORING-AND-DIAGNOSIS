@@ -1,0 +1,57 @@
+.container {
+    @apply z-50;
+    @apply text-sm;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+
+.link {
+    // Using px-5 so the logo is kinda center-aligned on Core's hamburger menu.
+    // TODO: Make Core's hamburger menu use Tailwind's px-5.
+    @apply py-4 px-5;
+    @apply bg-red-700;
+    @apply z-10;
+    @apply rounded-tl-lg;
+    svg {
+        height: 1em;
+        width: auto;
+        mix-blend-mode: screen;
+    }
+    &:hover {
+        @apply bg-red-600;
+    }
+}
+
+.text {
+    @apply text-black-900;
+    @apply bg-white bg-opacity-75;
+    // Use px-5 but make the right side go under the red button.
+    @apply pl-5 pr-6 -mr-2;
+    @apply z-0;
+    @apply rounded-tl-lg;
+    @apply flex items-center;
+}
+
+.textEnter {
+    @apply opacity-0;
+    transform: translateX(10em);
+}
+
+.textEnterActive {
+    @apply opacity-100;
+    transform: none;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.textExit {
+    @apply opacity-100;
+    transform: none;
+}
+
+.textExitActive {
+    @apply opacity-0;
+    transform: translateX(10em);
+    transition: opacity 300ms, transform 300ms;
+}

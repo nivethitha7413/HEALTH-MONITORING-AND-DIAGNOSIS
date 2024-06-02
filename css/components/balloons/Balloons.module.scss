@@ -1,0 +1,29 @@
+@use 'sass:math';
+$image-height: 300px;
+$image-width: 121px;
+.balloons {
+    .balloon {
+        position: fixed;
+        top: -$image-height;
+        margin-left: math.div(-$image-width, 2);
+        z-index: 1000000;
+        height: $image-height;
+        width: $image-width;
+        /* If modifying the duration, you should also modify Balloons.js */
+        animation-duration: 750ms;
+        animation-name: move-up;
+        animation-timing-function: ease-in;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes move-up {
+    from {
+        transform: translateY(calc(100vh + 300px));
+    }
+    to {
+        transform: translateY(0);
+    }
+}

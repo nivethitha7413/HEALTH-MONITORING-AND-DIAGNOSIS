@@ -1,0 +1,295 @@
+.header {
+    @apply z-50;
+    @apply min-h-[4rem];
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
+    @apply w-full h-16 border-b border-black-400;
+    @apply bg-white;
+    @apply fixed;
+    h1 {
+        @apply font-sans;
+        @apply font-semibold;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        svg {
+            @apply h-4;
+            @apply w-auto;
+        }
+        .betaTag {
+            @apply text-base text-black-600;
+            @apply pl-2;
+            @apply font-normal;
+            padding-top: 3px;
+        }
+    }
+    ul {
+        @apply list-none;
+        @apply flex;
+        li {
+            @apply flex;
+            @apply text-black-900;
+            button {
+                @apply rounded;
+            }
+        }
+        li.upgrade {
+            @apply font-sans text-base leading-none;
+            button {
+                @apply font-normal text-blue-700 p-1 outline-none rounded;
+            }
+            &:hover {
+                button {
+                    @apply bg-black-200;
+                }
+            }
+            @screen md {
+                button {
+                    @apply p-2;
+                }
+            }
+        }
+    }
+}
+
+.navMenu {
+    @apply flex;
+    @apply justify-end;
+    @apply items-center;
+    @apply h-8;
+    @apply relative;
+    @apply top-0.5;
+}
+
+.withDivider {
+    @apply pl-1 flex justify-end items-center;
+    @screen md {
+        @apply ml-2 border-l border-black-400;
+    }
+}
+
+.navAction {
+    @apply flex;
+    @apply items-center;
+    @apply cursor-pointer;
+    @apply text-base;
+    @apply px-6 gap-4;
+    @apply h-full;
+    @apply border-r border-black-400;
+    @screen md {
+        @apply px-6 h-full border-r border-black-400;
+        &:hover {
+            @apply bg-black-200;
+        }
+    }
+    &:focus {
+        @apply outline-none;
+    }
+    &:focus-visible {
+        @apply shadow-md;
+    }
+    img {
+        @apply rounded-full;
+        @apply border border-black-400;
+        height: 25px;
+        width: 25px;
+        @screen md {
+            @apply mr-2;
+        }
+    }
+    &.hideOnMobile {
+        @apply hidden;
+        @screen md {
+            @apply flex;
+        }
+    }
+}
+
+.closeButton {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-end;
+    @apply flex-none;
+    @apply py-3;
+}
+
+.closeButton svg {
+    animation: spin 500ms;
+}
+
+.disableLink {
+    @apply pointer-events-none;
+}
+
+.iconAlert {
+    @apply w-5 h-5;
+    @apply mr-1;
+}
+
+.continueTo {
+    @apply text-base;
+}
+
+.hideOnMobile {
+    @apply hidden;
+    @screen sm {
+        @apply inline;
+    }
+}
+
+.externalLink {
+    @screen md {
+        @apply flex;
+        @apply items-center;
+        @apply px-6;
+        @apply gap-2.5;
+        &:hover {
+            @apply bg-black-200;
+        }
+    }
+}
+
+.navBarSectionSelected {
+    @apply bg-black-200;
+    &:hover {
+        @apply bg-black-300;
+    }
+}
+
+.menuIcon {
+    @apply w-6;
+    @apply h-6;
+    @apply relative;
+}
+
+.openMenuButtonContainer {
+    @apply flex;
+    @apply justify-end;
+    @apply px-6;
+    @screen md {
+        @apply hidden;
+    }
+}
+
+.openMenuButton {
+    @apply flex;
+    @apply flex-row;
+    &:focus {
+        @apply bg-transparent;
+    }
+}
+
+.openMenuButtonWarningIcon {
+    @apply w-5;
+    @apply h-5;
+    @apply relative;
+    @apply left-3;
+    @apply top-1;
+    @apply z-10;
+}
+
+.externalLinkNavigation {
+    @apply hidden;
+    @screen md {
+        @apply flex;
+        @apply flex-auto;
+        @apply justify-start;
+        @apply h-full;
+    }
+}
+
+.externalLinkList {
+    @apply hidden;
+    @screen md {
+        @apply flex;
+        @apply flex-row;
+    }
+}
+
+.burgerMenuPopoverContainer {
+    @apply border;
+    @apply border-black-400;
+    @apply bg-white;
+    @apply text-black-900;
+    @apply mt-5;
+    @screen md {
+        @apply hidden;
+    }
+}
+
+.burgerMenuPopoverMenu {
+    @apply border-b;
+    @apply border-gray-400;
+    @apply py-2;
+    &:hover {
+        @apply cursor-pointer;
+    }
+}
+
+.iconWarning {
+    @apply w-5;
+    @apply h-5;
+    @apply mr-1;
+    @apply relative;
+    @apply bottom-0.5;
+}
+
+.burgerMenuListElement {
+    @apply px-6;
+    @apply py-2;
+    @apply leading-4;
+    &:hover {
+        @apply bg-black-200;
+    }
+}
+
+.createAppButtonWrapper {
+    @apply hidden;
+    @screen md {
+        @apply flex;
+        @apply items-center;
+        @apply justify-end;
+        @apply border-l border-black-400;
+        @apply h-full;
+    }
+}
+
+.createAppButton {
+    @apply w-full h-full;
+    @apply px-6 py-2.5;
+    &:hover {
+        @apply bg-black-200;
+    }
+    &:disabled {
+        @apply text-black-700;
+        @apply bg-black-200;
+        @apply cursor-default;
+    }
+}
+
+.newAppButton {
+    @apply border-t border-black-400;
+    @apply pt-2;
+    @screen md {
+        @apply hidden;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}

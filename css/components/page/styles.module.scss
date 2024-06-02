@@ -1,0 +1,45 @@
+.wrapper {
+    @apply flex-col;
+    @apply flex;
+    @apply font-sans;
+    @apply items-center;
+    @apply min-h-screen;
+    @apply w-full;
+}
+
+.pageContainer {
+    @apply w-full;
+    @apply flex-auto;
+    @apply mt-36;
+    @apply mb-20;
+    @screen lg {
+        @apply max-w-5xl;
+    }
+    &.justifyCenter {
+        @apply flex-1;
+        @apply flex-col;
+        @apply flex;
+        // Make up for the header size.
+        @apply pb-20;
+    }
+    h2 {
+        @apply text-3xl;
+        @apply font-semibold;
+    }
+    &>p {
+        @apply pt-4;
+    }
+}
+
+@screen lg {
+    .pageContainer.justifyCenter {
+        @apply max-w-3.5xl;
+    }
+}
+
+.toasterIcon {
+    @apply mr-2;
+    path {
+        @apply text-red-700 fill-current;
+    }
+}

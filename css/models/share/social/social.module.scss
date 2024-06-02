@@ -1,0 +1,29 @@
+.socialModal {
+    @apply w-full;
+    .promoteOptions {
+        @apply flex;
+        li {
+            @apply flex-1;
+            @apply text-sm;
+            @apply text-center;
+            @apply text-black-800;
+            a {
+                @apply flex flex-col;
+                @apply items-center;
+                @apply cursor-pointer;
+                svg {
+                    @apply mb-4;
+                }
+                &:active,
+                &:focus {
+                    @apply outline-none;
+                }
+            }
+        }
+    }
+    .yCombinatorLogo {
+        height: 48px;
+        width: 48px;
+        @apply rounded-full;
+    }
+}

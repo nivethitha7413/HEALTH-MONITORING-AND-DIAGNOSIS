@@ -1,0 +1,23 @@
+.carouselContainer {
+    @apply hidden;
+    @apply flex-col;
+    @apply -mb-40;
+    @apply w-9/12;
+    @apply overflow-clip;
+    @apply relative;
+    @screen md {
+        @apply flex;
+    }
+}
+
+.streamlitApp {
+    @apply w-[25rem];
+    @apply md: w-[15rem];
+    @apply lg: w-[27.5rem];
+    @apply xl: w-[30rem];
+    @apply my-4;
+    @apply p-2;
+    @apply rounded-lg;
+    @apply shadow-lg;
+    @apply h-auto;
+}

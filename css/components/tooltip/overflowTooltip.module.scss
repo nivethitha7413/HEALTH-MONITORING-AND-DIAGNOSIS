@@ -1,0 +1,10 @@
+.wrapper {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.ellipsized {
+    @apply truncate;
+    display: table-cell;
+}

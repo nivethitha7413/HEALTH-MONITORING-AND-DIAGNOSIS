@@ -1,0 +1,26 @@
+$go-back-svg-size: 1rem;
+$go-back-svg-margin: 0.75rem;
+.goBackWrapper {
+    @apply flex items-center justify-start;
+    @apply flex-none;
+}
+
+.goBack {
+    @apply flex items-center content-center;
+    @apply text-blue-700;
+    @apply text-lg;
+    @apply mb-2;
+    @screen md {
+        margin-left: -$go-back-svg-margin - $go-back-svg-size;
+    }
+    &>svg {
+        @apply inline;
+        margin-right: $go-back-svg-margin;
+        height: $go-back-svg-size;
+        width: $go-back-svg-size;
+        path {
+            @apply fill-current;
+            @apply text-blue-700;
+        }
+    }
+}

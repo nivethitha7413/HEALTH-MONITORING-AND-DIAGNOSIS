@@ -1,0 +1,23 @@
+.errorContainer {
+    .sleepingFace {
+        @apply w-12 pb-4;
+    }
+    h1 {
+        @apply text-2xl leading-tight;
+    }
+    .restartButton {
+        @apply mt-6;
+        @apply mr-auto;
+    }
+    footer {
+        @apply mt-8 text-black-700;
+        div.smallDivider {
+            @apply mb-4;
+            @apply border-t-2;
+            @apply w-6;
+        }
+        a {
+            @apply text-black-700 underline;
+        }
+    }
+}

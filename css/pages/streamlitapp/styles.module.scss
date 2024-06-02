@@ -1,0 +1,42 @@
+.streamlitAppContainer {
+    @apply flex;
+    @apply flex-col;
+    @apply flex-wrap;
+    @apply relative;
+    /* We use svh so that the iframe does not get hidden behind the iOS address bar
+    svh is not available in older versions of Safari, so we fallback to vh  */
+    min-height: 100vh;
+    min-height: 100svh;
+    @apply overflow-hidden;
+    /* fix iOS bug not displaying 100vh correctly */
+    @media only screen and (device-width >=768px) and (device-width <=1024px) {
+        min-height: stretch;
+    }
+    &.embed {
+        @apply border-2 rounded-xl border-gray-100;
+        @apply overflow-hidden;
+        @apply pb-8;
+        .viewerBadge>div {
+            @apply border border-l-0 border-t-0 rounded-br-xl;
+        }
+        .stateContainer {
+            .iframe {
+                @apply min-h-0;
+            }
+        }
+    }
+    .stateContainer {
+        @apply flex relative;
+        @apply flex-row;
+        @apply flex-auto;
+        @apply flex-nowrap;
+        .iframe {
+            @apply w-full;
+            /* We use svh so that the iframe does not get hidden behind the iOS address bar
+  svh is not available in older versions of Safari, so we fallback to vh  */
+            min-height: 100vh;
+            min-height: 100svh;
+            @apply overflow-auto;
+        }
+    }
+}

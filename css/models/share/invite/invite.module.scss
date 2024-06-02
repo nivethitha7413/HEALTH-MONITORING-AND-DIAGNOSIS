@@ -1,0 +1,25 @@
+.modalBody {
+    @apply w-full;
+    @apply flex flex-col;
+}
+
+.bodyPadding {
+    @apply px-4;
+}
+
+.modalTop {
+    @apply mb-3;
+}
+
+.modalContent {
+    @apply flex-1;
+    // 1. "overflow: s croll" creates an empty space for the scrollbar in browsers
+    //    that use Webkit or Blink (in browsers that use Gecko the scrollbar is overlayed by default).
+    // 2. "overflow: overlay" removes that empty space and forces the scrollbar to overlay.
+    //    NOTE: Browsers that use Gecko do *NOT* support "overlay" property.
+    // HACK: use "overflow: scroll" followed by "overflow: overlay".
+    // This will set the overflow property to "overlay" in browsers that support it,
+    // and will set it to "scroll" in others.
+    overflow: auto;
+    overflow: overlay;
+}

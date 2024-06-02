@@ -1,0 +1,78 @@
+$min-sidebar-width: 768px; // Matches modal overrides
+.sideNavigationContainer {
+    @apply h-full;
+    &~button {
+        @apply mr-2;
+    }
+    @media (min-width: $min-sidebar-width) {
+        @apply grid;
+        grid-template-columns: 260px auto;
+    }
+}
+
+.sideNavigationMenuContainer {
+    @apply bg-black-100;
+    @apply border-b border-black-400;
+    @apply z-10;
+    // Makes the Modal Header sticky so it does not scroll
+    @apply flex flex-col overflow-hidden;
+    @media (min-width: $min-sidebar-width) {
+        // Reposition the menu border (bottom → right).
+        @apply border-b-0;
+        @apply border-r border-black-400;
+    }
+}
+
+.itemList {
+    overflow: overlay;
+}
+
+.sideNavigationBodyContainer {
+    @apply relative;
+    // 1. "overflow: scroll" creates an empty space for the scrollbar in browsers
+    //    that use Webkit or Blink (in browsers that use Gecko the scrollbar is overlayed by default).
+    // 2. "overflow: overlay" removes that empty space and forces the scrollbar to overlay.
+    //    NOTE: Browsers that use Gecko do *NOT* support "overlay" property.
+    // HACK: use "overflow: scroll" followed by "overflow: overlay".
+    // This will set the overflow property to "overlay" in browsers that support it,
+    // and will set it to "scroll" in others.
+    overflow: scroll;
+    overflow: overlay;
+}
+
+.header {
+    @apply mt-6 #{!important};
+}
+
+.title {
+    @apply font-normal leading-9;
+}
+
+.subTitle {
+    @apply text-sm text-black-700 font-normal leading-4;
+}
+
+.topFade {
+    @apply hidden;
+    @media (min-width: $min-sidebar-width) {
+        @apply z-10;
+        @apply block;
+        @apply absolute;
+        @apply h-8;
+        @apply w-full;
+        @apply top-0;
+        @apply bg-gradient-to-b from-white;
+    }
+}
+
+.bottomFade {
+    @apply hidden;
+    @media (min-width: $min-sidebar-width) {
+        @apply block;
+        @apply absolute;
+        @apply h-8;
+        @apply w-full;
+        @apply bottom-0;
+        @apply bg-gradient-to-t from-white;
+    }
+}

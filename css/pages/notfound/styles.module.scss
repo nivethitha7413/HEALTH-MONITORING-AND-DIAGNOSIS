@@ -1,0 +1,30 @@
+ul.signInList {
+    @apply list-disc;
+    @apply pl-6;
+}
+
+.neutralFaceEmoji {
+    svg {
+        @apply w-12;
+    }
+    @apply pb-3;
+}
+
+h1.heading {
+    @apply text-2xl font-semibold leading-tight;
+}
+
+div.contactSupport {
+    @apply flex flex-col;
+    @apply mt-8;
+    @apply text-black-700;
+    div.smallDivider {
+        @apply mb-4;
+        @apply border-t-2;
+        @apply w-6;
+    }
+    .mailTo {
+        @apply text-black-700;
+        @apply underline;
+    }
+}

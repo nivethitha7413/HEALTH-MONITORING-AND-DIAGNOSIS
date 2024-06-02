@@ -1,0 +1,63 @@
+.root {
+    @apply flex;
+    @apply p-4;
+    @apply items-start;
+    @apply gap-8;
+    @apply self-stretch;
+    @apply rounded;
+    @apply border border-solid border-blue-200;
+    @apply bg-blue-100;
+}
+
+.container {
+    @apply flex;
+    @apply items-start;
+    @apply gap-3;
+}
+
+.notificationIcon {
+    @apply w-6;
+    @apply h-6;
+}
+
+.bodyContainer {
+    @apply flex;
+    @apply flex-col;
+    @apply items-start;
+}
+
+.title {
+    @apply self-stretch;
+    @apply text-gray-900;
+    @apply font-sans;
+    @apply text-base;
+    @apply font-bold;
+}
+
+.description {
+    @apply text-gray-900;
+    @apply font-sans;
+    @apply text-base;
+    @apply font-normal;
+}
+
+.actionButton {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply gap-1.5;
+}
+
+.actionText {
+    @apply text-blue-700;
+    @apply font-sans;
+    @apply text-base;
+    @apply font-normal;
+}
+
+.actionIcon {
+    >svg {
+        @apply w-4;
+        @apply h-4;
+    }
+}

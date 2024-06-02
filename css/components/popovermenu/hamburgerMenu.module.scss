@@ -1,0 +1,29 @@
+.button {
+    @apply px-3;
+    @apply py-2;
+    @apply transition-colors duration-200;
+    &:focus,
+    &:active {
+        @apply outline-none;
+    }
+    &.disabled {
+        @apply opacity-50;
+        @apply cursor-not-allowed;
+    }
+}
+
+.button_light:hover {
+    @apply bg-black-200 rounded;
+}
+
+.button_dark:hover {
+    @apply bg-black-900 rounded;
+}
+
+.icon {
+    width: 4px;
+    height: 16px;
+    path {
+        @apply fill-current;
+    }
+}

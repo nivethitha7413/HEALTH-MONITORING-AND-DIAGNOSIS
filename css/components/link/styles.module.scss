@@ -1,0 +1,11 @@
+.link {
+    @apply text-blue-700;
+    &:hover,
+    svg:hover {
+        @apply underline;
+    }
+    svg {
+        @apply inline-block h-4 w-4;
+        @apply fill-blue-700;
+    }
+}

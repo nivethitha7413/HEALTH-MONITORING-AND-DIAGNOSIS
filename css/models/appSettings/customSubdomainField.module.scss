@@ -1,0 +1,20 @@
+.container {
+    @apply mt-4;
+    @apply flex;
+    @apply gap-8;
+    @apply items-center;
+    min-height: 48px;
+    &>div {
+        @apply w-full;
+    }
+}
+
+.error {
+    @apply mt-2;
+    @apply text-base text-red-700;
+}
+
+.validated {
+    @apply mt-2;
+    @apply text-base text-green-700;
+}
